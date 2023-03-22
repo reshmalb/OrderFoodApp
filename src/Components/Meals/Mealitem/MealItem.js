@@ -2,13 +2,13 @@ import React from "react";
 import classes from './MealItem.module.css'
 
 
-const MealItem=(props)=>{
-   ;
+const MealItem=(props)=>{ 
+   
     const price=`$${ props.price.toFixed(2) }`;
     
     
     return(
-        <li>
+        <li className={classes.meal} >
             <div className={classes.name}>
                 <h3>{props.name}</h3>
             </div>
