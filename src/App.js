@@ -10,6 +10,8 @@ function App() {
 
   const showCartHandler=()=>{
     seCartIsShown(true);
+   
+
   }
   const hideCartHandler=()=>{
     seCartIsShown(false);
