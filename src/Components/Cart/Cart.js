@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useState } from "react";
 import classes from './Cart.module.css'
 import Modal from "../UI/Modal";
 import CartContext from "../../Context-Store/CartContext";
@@ -9,10 +9,15 @@ const Cart=props=>{
     const totalAmount=`$${cartCtx.totalAmount.toFixed(2)}`;
     const hasitems=cartCtx.items.length>0;
 
-    const cartItemRemoveHandler=()=>{
+    // const [newAmount,setNewAmount]=useState();
+
+
+    const cartItemRemoveHandler=(id)=>{
+      cartCtx.removeItem({id,amount:1})
 
     }
-    const cartItemAddHandler=()=>{
+    const cartItemAddHandler=(item)=>{
+        cartCtx.addItem({item,amount:1})
 
     }
 
