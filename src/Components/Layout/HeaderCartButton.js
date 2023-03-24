@@ -12,7 +12,7 @@ const HeaderCartButton=(props)=>{
         return curNumber+item.amount;
     },0);
    
-        console.log("number",numberOfCartItems)
+        console.log("number of cartitems",numberOfCartItems)
 
     return ( 
         <button className={classes.button} onClick={props.onClick}>
